@@ -93,7 +93,7 @@ def load_data(directory):
 def main():
     if len(sys.argv) > 2:
         sys.exit("Usage: python degrees.py [directory]")
-    directory = sys.argv[1] if len(sys.argv) == 2 else "small"
+    directory = sys.argv[1] if len(sys.argv) == 2 else "large"
 
     # Load data from files into memory
     print("Loading data...")
@@ -117,7 +117,7 @@ def main():
         path = [(None, source)] + path
         for i in range(degrees):
             person1 = people[path[i][1]]["name"]
-            #print (person1)
+            print (person1)
             person2 = people[path[i + 1][1]]["name"]
             movie = movies[path[i + 1][0]]["title"]
             print(f"{i + 1}: {person1} and {person2} starred in {movie}")
